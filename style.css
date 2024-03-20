@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Set up smooth scrolling and determine font size*/
+html {
+    scroll-behavior: smooth;
+    font-size: 20px;
+}
+/* Set up background, background img will be update later*/
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(7, 0, 23, 0.7), rgb(7, 0, 23, 0.7)), url(anime-girls-background-12.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+/* Navigator bar here, logo img will be update later*/
+nav{
+    padding: 1rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar{
+    flex: 1;
+    text-align: right;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    position: relative;
+}
+.navbar ul li a{
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 1.75rem;
+    transition: .3s;
+}
