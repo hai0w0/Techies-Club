@@ -1,13 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&display=swap');
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
 }
-/* Set up smooth scrolling and determine font size*/
+/*===============================================
+ Set up smooth scrolling and determine font size
+ ================================================ */
 html {
     scroll-behavior: smooth;
     font-size: 20px;
 }
-/* Set up background, background img will be update later*/
+/*=====================================================
+ Set up background, background img will be update later
+ ====================================================== */
 .header{
     min-height: 100vh;
     width: 100%;
@@ -16,7 +23,9 @@ html {
     background-size: cover;
     position: relative;
 }
-/* Navigator bar here, logo img will be update later*/
+/*================================================
+ Navigator bar here, logo img will be update later
+ ================================================= */
 nav{
     padding: 1rem 10%;
     display: flex;
@@ -38,6 +47,117 @@ nav{
     color: white;
     text-decoration: none;
     font-weight: 600;
-    margin-left: 1.75rem;
     transition: .3s;
+}
+.navbar ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: white;
+    display: block;
+    margin: auto;
+    transition: .3s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+    position: relative;
+}
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: crimson;
+}
+/*=====================================================================
+Text box containing club's name and its welcoming speech. Can be update
+======================================================================= */
+.text-box{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); /*help the club's name in the middle of the page*/
+    text-align: center;
+}
+.text-box h1{
+    font-size: 3rem;
+}
+.text-box p{
+    margin: 0.5rem 0 2rem;
+    font-size: 1rem;
+    color: white;
+}
+/*===============
+visit club button
+================= */
+.animated-btn{
+    display: grid;
+    top: 300px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 10;
+}
+span{
+    color: white;
+    font-size: 1rem;
+    z-index: 10;
+}
+.animated-btn::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 150%;
+    background: crimson;
+    transform: rotate(90deg);
+}
+.animated-btn:hover::before{
+    animation: animate 2s linear infinite;
+}
+@keyframes animate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.animated-btn::after{
+    position: absolute;
+    content: '';
+    inset: 2px;
+    background: black;
+    border-radius: 1rem;
+}
+/*============================================
+ For phone user, need more update on animation
+ ============================================= */
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 3rem;
+    }
+    .navbar ul li{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        background: crimson;
+        height: 100vh;
+        width: 10rem;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+    }
 }
