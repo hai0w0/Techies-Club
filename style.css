@@ -27,7 +27,7 @@ html {
  Navigator bar here, logo img will be update later
  ================================================= */
 nav{
-    padding: 1rem 10%;
+    padding: 20px 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,11 +39,11 @@ nav{
 .navbar ul li{
     list-style: none;
     display: inline-block;
-    padding: 0.4rem 1rem;
+    padding: 8px 20px;
     position: relative;
 }
 .navbar ul li a{
-    font-size: 1rem;
+    font-size: 20px;
     color: white;
     text-decoration: none;
     font-weight: 600;
@@ -60,7 +60,6 @@ nav{
 }
 .navbar ul li:hover::after{
     width: 100%;
-    position: relative;
 }
 .navbar ul li a:hover,
 .navbar ul li a.active {
@@ -79,76 +78,94 @@ Text box containing club's name and its welcoming speech. Can be update
     text-align: center;
 }
 .text-box h1{
-    font-size: 3rem;
+    font-size: 60px;
 }
 .text-box p{
-    margin: 0.5rem 0 2rem;
-    font-size: 1rem;
+    margin: 10px 0 40px;
+    font-size: 20px;
     color: white;
 }
 /*===============
 visit club button
 ================= */
-.animated-btn{
-    display: grid;
-    top: 300px;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 400px;
-    justify-content: center;
-    align-items: center;
+.visit-btn{
+    display: inline-flex;
     text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    background: white;
     color: white;
-    border: 1px solid white;
-    border-radius: 1rem;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    text-align: center;
+    padding: 10px 30px;
+    font-size: 12px;
     position: relative;
     cursor: pointer;
-    overflow: hidden;
-    z-index: 10;
+    transition: 0.5s;
 }
-span{
+.visit-btn:hover{
+    background: var(--clr);
     color: white;
-    font-size: 1rem;
-    z-index: 10;
+    letter-spacing: 0.25em;
+    box-shadow: 0 0 35px var(--clr);
 }
-.animated-btn::before{
-    position: absolute;
+.visit-btn:before{
     content: '';
-    width: 100%;
-    height: 150%;
-    background: crimson;
-    transform: rotate(90deg);
-}
-.animated-btn:hover::before{
-    animation: animate 2s linear infinite;
-}
-@keyframes animate{
-    from{
-        transform: rotate(0deg);
-    }
-    to{
-        transform: rotate(360deg);
-    }
-}
-.animated-btn::after{
     position: absolute;
-    content: '';
     inset: 2px;
     background: black;
-    border-radius: 1rem;
 }
+a span{
+    position: relative;
+    z-index: 1;
+}
+a i{
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+a i::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 10px;
+    height: 2px;
+    background: black;
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+a:hover i::before{
+    width: 20px;
+    left: 20%;
+}
+a i::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 10px;
+    height: 2px;
+    background: black;
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+a:hover i::after{
+    width: 20px;
+    left: 80%;
+}
+/*==============================
+menu bar button for phone,tablet 
+================================ */
 nav .bx{
     display: none;  
 }
-/*============================================
- For phone user, need more update on animation
- ============================================= */
-@media(max-width: 700px){
+
+/*=========================================================================
+ For phone user, need more update on animation (BETA TEST, STILL NOT READY)
+ ========================================================================== */
+
+ @media(max-width: 700px){ /*for phone user only!!! Not Tablet user!!!*/
     .text-box h1{
-        font-size: 1rem;
+        font-size: 20px;
     }
     
     .navbar ul li{
@@ -158,20 +175,12 @@ nav .bx{
         position: absolute;
         background: crimson;
         height: 100vh;
-        width: 10rem;
+        width: 200px;
         top: 0;
-        right: -11rem;
+        right: -200px;
         text-align: left;
         z-index: 2;
-    }
-    .animated-btn{
-        position: sticky;
-        max-width: 10rem;
-        max-height: 70vh;
-        top: 90%;
-        left: 50%;
-        text-align: center;
-        z-index: 0;
+        transition: 1s;
     }
     nav .bx{
         display: block;
@@ -183,4 +192,38 @@ nav .bx{
     .navbar ul{
         padding: 30px;
     }
+}
+.project{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+h1{
+    font-size: 30px;
+    font-weight: 600;
+}
+p{
+    color: black;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 20px;
+    padding: 10px;
+}
+.row{
+    flex: 1;
+    margin: 2px;
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.project-col{
+    background: grey;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
 }
