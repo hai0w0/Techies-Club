@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width = device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Techies CLub's Website</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -13,7 +13,8 @@
     <section class="header">
         <nav>
             <a href="index.html" class="logo"><img src="logo.png"></a>
-            <div class="navbar">
+            <div class="navbar" id="navBar">
+                <i class='bx bxs-x-square' onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="">HOME</a></li>
                     <li><a href="">ABOUT US</a></li>
@@ -21,11 +22,12 @@
                     <li><a href="">CONTACT</a></li>
                 </ul>
             </div>
+            <i class='bx bx-menu' onclick="showMenu()"></i>
         </nav>
     <div class="text-box">
         <h1>TECHIES RMIT CLUB</h1>
-        <p>Techies RMIT Club: Where tech enthusiasts unite! Dive into the world of technology, IT, AI, robotics,
-        and more with our dynamic community.<br> From workshops to networking events, we're your gateway to all
+        <p>Where tech enthusiasts unite! Dive into the world of technology, IT, AI, robotics,
+        and more with our dynamic community. From workshops to networking events, we're your gateway to all
         things "techy". Join us and unleash your potential in the ever-evolving tech landscape!</p>  
     </div>
     <div class="animated-btn">
@@ -33,5 +35,7 @@
     </div>
     
     </section>
+
+    <script src="jsclub/script.js"></script>
 </body>
 </html>
