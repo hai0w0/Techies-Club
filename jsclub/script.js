@@ -5,3 +5,7 @@ function showMenu(){
 function hideMenu(){
     navBar.style.right = "-200px";
 }
+var anchorLinks = document.querySelectorAll(".navbar a");
+anchorLinks.forEach(function(anchorLink) {
+    anchorLink.addEventListener("click", hideMenu);
+});
