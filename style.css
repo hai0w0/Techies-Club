@@ -403,7 +403,7 @@ h5{
     font-weight: 600;
   }
   /*icons*/
-  .icon .bx{
+  ion-icon { 
     color: black;
     margin: 0 13px;
     cursor: pointer;
@@ -412,3 +412,4 @@ h5{
   .bx-heart{
     color: red;
   }
+  
