@@ -5,16 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Techies CLub's Website</title>
+    <title>RMIT Techies Club</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+    <!-- Back-to-top button -->
+    <a href="#" class="to-top">
+        <ion-icon name="chevron-up-circle-outline"></ion-icon>
+    </a>
     <section class="header">
         <nav>
-
+            <!-- logo -->
             <a href="#" class="logo"><img src="images/logo.png"></a>
-
+            <!-- navbar -->
             <div class="navbar" id="navBar">
 
                 <i class='bx bxs-x-square' onclick="hideMenu()"></i>
@@ -27,24 +32,29 @@
                 </ul>
 
             </div>
+            <!-- Menu's Button for phone -->
             <i class='bx bx-menu' onclick="showMenu()"></i>
         </nav>
 
     <div class="text-box">
         <h1>RMIT TECHIES CLUB</h1>
+        <!-- Header Paragraph -->
         <p>Where tech enthusiasts unite! Dive into the world of technology, IT, AI, robotics,
         and more with our dynamic community. From workshops to networking events, we're your gateway to all
-        things "techy". Join us and unleash your potential in the ever-evolving tech landscape!</p> 
+        things "techy". Join us and unleash your potential in the ever-evolving tech landscape!</p>
+        <!--Visit's Button - Google's form to be linked--> 
         <a href="https://forms.gle/eYCF1t6BRGtJxmww8" target="_blank" style="--clr:#dc143c" class="visit-btn"><span>Visit us to know more</span><i></i></a> 
     </div>
 
     </section>
 
     <section class="project" id="project">
+        <!--Projects' List-->
         <h1>Our project so far:</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore officiis quo aperiam dolorem.
-             Atque necessitatibus asperiores nostrum obcaecati assumenda, quidem aspernatur accusamus enim,
-              nihil porro temporibus delectus totam non magni.</p>
+        <!-- Projects Paragraph -->
+        <p>Check out our tech club's projects page! It's where our members showcase their latest software and hardware creations.
+             From apps to gadgets, our projects highlight the innovation happening right here at our university.
+              Dive in and get inspired!</p>
 
         <div class="row">
             <div class="project-col">
@@ -76,10 +86,14 @@
     </section>
 
     <section class="about" id="about">
+        <!--About our club's section-->
         <h1>About our club</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aliquid, ut eum id rem eligendi, quaerat
-         odio inventore velit quis ipsam ab officiis debitis, dolorem saepe voluptas
-          quidem suscipit. Veritatis.</p>
+        <!-- About us Paragraph -->
+        <p>RMIT Techies Club (RTC), born in 2024 through the vision of Dao Duc Lam and
+             Luong Chi Bach. We're a dynamic community driven by a shared passion for technology and innovation.
+              From immersive coding sessions to thrilling hackathons, we offer a platform for students to learn,
+               create, and thrive in this era of technology.
+             Join us as we embark on a journey of exploration, collaboration, and endless possibilities!</p>
 
         <div class="row">
             <div class="image-row">
@@ -107,6 +121,7 @@
     </section>
 
     <section class="founder">
+        <!-- Core members section -->
         <h1>Our Core Members</h1>
         <h5>Luong Chi Bach - Founder of RMIT Techies Club.</h5>
         <h5>Dao Duc Lam - Founder of RMIT Techies Club.</h5>
@@ -133,15 +148,22 @@
         </div>
     </section>
     <section class="contact" id="contact">
+        <!-- 2nd Google Form's section -->
         <h1>So Join Us Now To Make Your University Life A Dream Come True</h1>
         <a href="https://forms.gle/eYCF1t6BRGtJxmww8" target="_blank" style="--clr:#dc143c" class="visit-btn"><span>JOIN NOW</span><i></i></a>
     </section>
     <section class="footer">
-        <h4>Learn more about us here</h4>
-        <p>Honestly, I just want to say that I have to code basically
-            everything from 0. So if any girls interested in dating, pls contact me. I am very desperate!
+        <!-- Footer section -->
+        <h4>Stay updated on our tech club's latest events and projects by following us on social media and joining our vibrant community of tech enthusiasts! </h4>
+        <p>Sometimes, the message is not what you see but what is in it.
         </p>
+        <h6>01010100 01110010 01111001 00100000 01110100 01101111 00100000 01100110 01101001
+             01101110 01100100 00100000 01101101 01111001 00100000 01110011 01100101 01100011
+              01110010 01100101 01110100 00100000 01101101 01100101 01110011 01110011 01100001 01100111
+               01100101 00100000 01101001 01101110 00100000 01110100 01101000 01101001 01110011 00100000
+                01110111 01100101 01100010 01110011 01101001 01110100 01100101</h6>
         <div class="icon">
+            <!-- clickable Icons section. For future use, search at ionicon -->
             <a href="https://www.facebook.com/Br1anTran" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
             <ion-icon name="logo-twitter"></ion-icon>
             <a href="mailto: trandinhhai24092003@gmail.com"><ion-icon name="mail-unread-outline"></ion-icon></a>
@@ -152,6 +174,13 @@
     </section>
     <div class="container">
     </div>
+    <div id="hidden-url" style="display: none;">https://files.catbox.moe/bgjr0z.png</div>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const hiddenUrl = document.getElementById('hidden-url').textContent;
+            console.log('Hidden Image URL:', hiddenUrl);
+        });
+        </script>
     <script src="jsclub/script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
