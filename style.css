@@ -12,6 +12,9 @@ html {
     scroll-behavior: smooth;
     font-size: 20px;
 }
+/*==================
+    Back-to-top button
+   =================== */
 .to-top {
     background: red;
     position: fixed;
@@ -131,7 +134,17 @@ Text box containing club's name and its welcoming speech. Can be update
     text-align: center;
 }
 .text-box h1{
-    font-size: 60px;
+    font-size: 130px;
+    font-family: Copperplate,fantasy;
+    font-weight: bolder;
+    justify-items: center;
+    background: url('images/h1background.jpg');
+    background-size: cover;
+    background-position-y: -900px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 1px white;
+
 }
 .text-box p{
     margin: 10px 0 40px;
@@ -312,7 +325,10 @@ h3{
     overflow: hidden;
  }
  .image-row img{
+    
     width: 100%;
+    object-fit: cover;
+    object-position: center;
     display: block;
  }
  .motto{
@@ -448,13 +464,16 @@ h5{
     color: black;
     margin: 0 13px;
     cursor: pointer;
+    font-size: 2em;
     padding: 20px 0;
+    transition: 0.5s;
+  }
+  .footer ion-icon:hover{
+    transform: translateY(-10px);
   }
   .bx-heart{
     color: red;
   }
-  /*==================
-    Back-to-top button
-   =================== */
+  
   
   
