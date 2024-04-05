@@ -73,7 +73,9 @@ body{
 .header{
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(7, 0, 23, 0.7), rgb(7, 0, 23, 0.7)), url(images/anime-girls-background-12.png);
+    background: linear-gradient(to bottom, rgb(238, 9, 121, 0.7), rgb(255, 106, 0, 0.7));
+    background-repeat: repeat no-repeat;
+    /*background-image: linear-gradient(rgba(7, 0, 23, 0.7), rgb(7, 0, 23, 0.7)), url(images/anime-girls-background-12.png);*/
     background-position: center;
     background-size: cover;
     position: relative;
